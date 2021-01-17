@@ -28,7 +28,7 @@ public class TileMap : MonoBehaviour
     {
 
     }
-    //test
+
     public void nextMap()
     {
 
