@@ -11,6 +11,17 @@ public enum WeaponTypes
 public abstract class Weapon : MonoBehaviour
 {
     protected WeaponTypes type;
+    public WeaponTypes Type
+    {
+        get
+        {
+            return type;
+        }
+        set
+        {
+            type = value;
+        }
+    }
     protected float power;
 
     public abstract void doAttack();
