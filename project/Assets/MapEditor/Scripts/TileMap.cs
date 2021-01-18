@@ -4,22 +4,31 @@ using UnityEngine;
 
 public class TileMap : MonoBehaviour
 {
+    [SerializeField]
+    private int x;
+    [SerializeField]
+    private int y;
+    [SerializeField]
+    private int length;
+
     public int tileX {
-        get { return tileX; }
-        set { tileX = value; }
+        get { return x; }
+        set { x = value; }
            
     }
+    
     public int tileY
     {
-        get { return tileY; }
-        set { tileY = value; }
+        get { return y; }
+        set { y = value; }
     }
+    
     public int shortestPathLength
     {
-        get { return shortestPathLength; }
+        get { return length; }
     }
 
-    public ArrayList connectedTileMap = new ArrayList();
+    public GameObject[] connectedGameObject = new GameObject[4];
 
     
     
