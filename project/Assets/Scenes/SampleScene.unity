@@ -214,8 +214,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1813283415}
   - component: {fileID: 1813283414}
-  - component: {fileID: 1813283416}
   - component: {fileID: 1813283417}
+  - component: {fileID: 1813283418}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -288,18 +288,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1813283416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1813283413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 909f16d6b58a73d4391260b6e583a734, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1813283417
 Animator:
   serializedVersion: 3
@@ -319,3 +307,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1813283418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813283413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 909f16d6b58a73d4391260b6e583a734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 8907097390373286268, guid: 80cc8c73c241b9942b41d48dc6137172, type: 3}
+  weaponTypeCheck: 1

@@ -10,6 +10,16 @@ public enum WeaponTypes
 
 public abstract class Weapon : MonoBehaviour
 {
+    protected Animator anim;
+    public Animator Anim
+    {
+        get
+        {
+            return anim;
+        }
+    }
+
+
     protected WeaponTypes type;
     public WeaponTypes Type
     {
@@ -23,6 +33,11 @@ public abstract class Weapon : MonoBehaviour
         }
     }
     protected float power;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     public abstract void doAttack();
 }

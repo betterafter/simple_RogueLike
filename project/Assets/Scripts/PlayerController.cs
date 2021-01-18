@@ -3,28 +3,38 @@
 public class PlayerController : MonoBehaviour
 {
     private int hp=10;
+    [SerializeField]
+    private GameObject weapon=null;
     private Weapon w;
     private Job job;
+    // job -> weapon.animator.setTrigger
+    // job.doAttack(weapon)
+
     private int health=10;
     private int attackDamage=1;
     private int magicDamage=5;
     private int attackSpeed=50;
     private int armor=3;
+    [SerializeField]
     private bool weaponTypeCheck=true;
 
 
-    private bool isWalk=false;
     SpriteRenderer spriteRenderer;
     Animator anim;
     private void Awake()
     {
-        w = GetComponent<Weapon>();
-        job = GetComponent<Job>();
+        job = new Magician();
+        //job = new Knight();
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+
+        weapon = Instantiate(weapon,transform);
+        weapon.transform.position = transform.position + new Vector3(0.129f, -0.218f);
+        w = weapon.GetComponent<Weapon>();
+        weaponTypeCheck = job.weaponCheck(w.Type);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         doMovement();
         playerAttack();
@@ -39,7 +49,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButton("Horizontal"))
         {
             anim.SetBool("isWalk", true);
-            spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
+            if(x*transform.localScale.x == -1.0)
+            {
+                transform.localScale = new Vector3(x, 1, 1);
+            }
         }
         else
         {
@@ -55,19 +68,19 @@ public class PlayerController : MonoBehaviour
             // 직업이 지원하는 무기와 맞으면 직업의 공격모션.
             // 아니라면 무기의 기본 공격 모션 사용
             if (weaponTypeCheck)
-                job.doAttack();
+                job.doAttack(weapon);
             else
                 w.doAttack();
         }
         // 스킬 1
         else if (Input.GetKeyDown(KeyCode.S))
         {
-            job.doSkill1(weaponTypeCheck);
+            job.doSkill1(weapon);
         }
         // 스킬 2
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            job.doSkill2(weaponTypeCheck);
+            job.doSkill2(weapon);
         }
     }
 
@@ -84,7 +97,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // 무기 적성 갱신
-        job.weaponCheck(w.Type);
+        weaponTypeCheck = job.weaponCheck(w.Type);
 
         // 직업 변경 가능 여부 확인
         job.checkJobChange(health, ad, md, aspeed, armor);
