@@ -17,7 +17,7 @@ public class MapSortingAlgorithm : MonoBehaviour
 
     private void Awake()
     {
-        TileMaps = Resources.LoadAll("Tilemap/prefabs");
+        TileMaps = Resources.LoadAll("betterafter/Tilemap/prefabs");
     }
 
     // Start is called before the first frame update
