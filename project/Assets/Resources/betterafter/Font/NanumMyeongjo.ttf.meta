@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 77b7e3046bea149fd8199de19e9c77c6
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: NanumMyeongjo
+  fontNames:
+  - NanumMyeongjo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 42a8be125e37945faa46e88ce2fab4be, type: 3}
+  - {fileID: 12800000, guid: c3aa3fab9fc854a1cbfdc5ccccf0f80c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
