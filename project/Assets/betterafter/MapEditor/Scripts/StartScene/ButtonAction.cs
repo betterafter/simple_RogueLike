@@ -31,6 +31,6 @@ public class ButtonAction : MonoBehaviour
 
     public void GameStart()
     {
-        SceneManager.LoadScene("InGame");
+        SceneManager.LoadScene("mapScene");
     }
 }

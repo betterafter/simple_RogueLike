@@ -204,7 +204,6 @@ public class MapSortingAlgorithm : MonoBehaviour
             }
         }
 
-        Debug.Log(ChunkList.Count);
 
         bool[,] ChunkListCheck = new bool[ChunkList.Count, ChunkList.Count];
         for (int i = 0; i < ChunkList.Count; i++) { for (int j = 0; j < ChunkList.Count; j++) ChunkListCheck[i, j] = false; }
@@ -235,7 +234,6 @@ public class MapSortingAlgorithm : MonoBehaviour
 
                         if(Mathf.Abs(x1 - x2) + Mathf.Abs(y1 - y2) == 1)
                         {
-                            Debug.Log("(" + x1 + " , " + y1 + ")   (" + x2 + " , " + y2 + ")");
                             GameObject curr = stageMap[x1, y1];
                             GameObject next = stageMap[x2, y2];
 

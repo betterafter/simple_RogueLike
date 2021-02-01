@@ -4573,9 +4573,10 @@ GameObject:
   - component: {fileID: 6020986563130069524}
   - component: {fileID: 6020986563130069522}
   - component: {fileID: 6020986563130069525}
+  - component: {fileID: 3613780585738163889}
   m_Layer: 0
-  m_Name: GameobjectTilemap
-  m_TagString: Untagged
+  m_Name: ladderTilemap
+  m_TagString: ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4927,6 +4928,22 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!19719996 &3613780585738163889
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6020986563130069527}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &8226167122547360669
 GameObject:
   m_ObjectHideFlags: 0
