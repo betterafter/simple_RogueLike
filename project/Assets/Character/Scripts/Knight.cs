@@ -2,9 +2,9 @@
 
 public class Knight : Job
 {
-    public Knight()
+    private void Awake()
     {
-        this.jobName = "Knight";
+        jobName = "Knight";
     }
     public override void doAttack(GameObject weapon)
     {
@@ -29,6 +29,7 @@ public class Knight : Job
     }
     public override bool weaponCheck(WeaponTypes weapon)
     {
+        Debug.Log(weapon);
         return weapon == WeaponTypes.Sword;
     }
 }

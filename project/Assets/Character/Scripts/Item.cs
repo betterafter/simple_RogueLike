@@ -22,8 +22,10 @@ public class Item : MonoBehaviour
         md = Random.Range(0, 50);
         aspeed = Random.Range(0, 50);
         armor = Random.Range(0, 50);
-        weaponToGet = Instantiate(weaponsList[Random.Range(0, weaponsList.Length)],transform.position+new Vector3(-0.2f,0.5f),Quaternion.identity);
-        weaponToGet.transform.parent = gameObject.transform;
+        weaponToGet = Instantiate(weaponsList[Random.Range(0, weaponsList.Length)],transform);
+        //weaponToGet.transform.localPosition = new Vector3(-0.2f, 0.5f);
+        //weaponToGet.transform.localPosition = new Vector3(-0.5f, 0.5f);
+        //weaponToGet.transform.parent = gameObject.transform;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

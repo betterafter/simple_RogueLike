@@ -6,9 +6,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject weapon=null;
     private Weapon w;
+    [SerializeField]
     private Job job;
-    // job -> weapon.animator.setTrigger
-    // job.doAttack(weapon)
 
     private int health=10;
     private int attackDamage=1;
@@ -22,8 +21,7 @@ public class PlayerController : MonoBehaviour
     private CapsuleCollider2D capsule;
     private void Awake()
     {
-        job = gameObject.AddComponent<Knight>();
-
+        job = gameObject.AddComponent<Magician>();
         anim = GetComponent<Animator>();
         capsule = GetComponent<CapsuleCollider2D>();
         capsule.enabled = false;
@@ -31,6 +29,7 @@ public class PlayerController : MonoBehaviour
         weapon = Instantiate(weapon,transform);
         weapon.transform.localPosition = new Vector3(0.129f, -0.218f);
         w = weapon.GetComponent<Weapon>();
+
         weaponTypeCheck = job.weaponCheck(w.Type);
     }
 
@@ -75,12 +74,9 @@ public class PlayerController : MonoBehaviour
         // 스킬 1
         else if (Input.GetKeyDown(KeyCode.S))
         {
-            //Destroy(job);
-            //job = gameObject.AddComponent<Knight>();
-            //weaponTypeCheck = job.weaponCheck(w.Type);
             capsule.enabled = true;
 
-            job.doSkill1(weapon);
+            //job.doSkill1(weapon);
         }
         // 스킬 2
         else if (Input.GetKeyDown(KeyCode.D))
