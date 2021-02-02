@@ -45,8 +45,8 @@ Tilemap:
   - first: {x: -1, y: -14, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -54,8 +54,8 @@ Tilemap:
   - first: {x: 0, y: -14, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -530,11 +530,16 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 54
+  - m_RefCount: 52
     m_Data: {fileID: 11400000, guid: 90532521c627d7047aa46e62d4670b51, type: 2}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: a7124c0720d154f618765e6eac1f6c88, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 54
+  - m_RefCount: 52
     m_Data: {fileID: 988475498313966688, guid: 5250bea4cceeddb4ead961f93b617cf3, type: 3}
+  - m_RefCount: 2
+    m_Data: {fileID: -6712887419673792273, guid: 5250bea4cceeddb4ead961f93b617cf3,
+      type: 3}
   m_TileMatrixArray:
   - m_RefCount: 54
     m_Data:
@@ -1454,7 +1459,7 @@ Tilemap:
   - first: {x: 0, y: -14, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 15
+      m_TileIndex: 13
       m_TileSpriteIndex: 17
       m_TileMatrixIndex: 6
       m_TileColorIndex: 0
@@ -4827,11 +4832,11 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 72268fcbf89dfe649bbd429e8d5f7ae3, type: 2}
   - m_RefCount: 169
     m_Data: {fileID: 11400000, guid: 4163cfd46cc8451448b3864b4ffbab02, type: 2}
-  - m_RefCount: 15
+  - m_RefCount: 14
     m_Data: {fileID: 11400000, guid: 6d082bb84a5dfb040912630e6f2b05f4, type: 2}
   - m_RefCount: 273
     m_Data: {fileID: 11400000, guid: bceb3bc031674284aaec99b7d60ed7dc, type: 2}

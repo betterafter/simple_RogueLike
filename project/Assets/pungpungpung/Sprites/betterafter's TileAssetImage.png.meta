@@ -128,6 +128,12 @@ TextureImporter:
   - first:
       213: 2513637134755289084
     second: betterafter's TileAssetImage_41
+  - first:
+      213: 6709709424547730353
+    second: betterafter's TileAssetImage_42
+  - first:
+      213: -6712887419673792273
+    second: betterafter's TileAssetImage_43
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1114,6 +1120,48 @@ TextureImporter:
       bones: []
       spriteID: cf7d15ff7ab32e220800000000000000
       internalID: 2513637134755289084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: betterafter's TileAssetImage_42
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3124c0c2dad1d50800000000000000
+      internalID: 6709709424547730353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: betterafter's TileAssetImage_43
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0b72d457807d2a0800000000000000
+      internalID: -6712887419673792273
       vertices: []
       indices: 
       edges: []

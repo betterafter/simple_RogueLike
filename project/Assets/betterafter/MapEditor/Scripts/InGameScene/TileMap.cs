@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class TileMap : MonoBehaviour
 {
@@ -15,6 +17,13 @@ public class TileMap : MonoBehaviour
     private int bx;
     [SerializeField]
     private int by;
+
+    private GameObject player;
+
+    public Image handle;
+    public Image outLine;
+    private Canvas canvas;
+
 
     private const int arraySize = 5;
     private int[,] PathLength;
@@ -48,7 +57,6 @@ public class TileMap : MonoBehaviour
 
     public GameObject[] connectedGameObject = new GameObject[4];
 
-
     public void Init()
     {
         length = 0;
@@ -70,8 +78,6 @@ public class TileMap : MonoBehaviour
         }
     }
 
-
-
     public void shortestPathCalculation(GameObject currentObject, int len)
     {
         TileMap currentTileMap = currentObject.GetComponent<TileMap>();
@@ -89,5 +95,40 @@ public class TileMap : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void Start()
+    {
+        canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+        outLine = canvas.gameObject.transform.GetChild(0).GetComponent<Image>();
+        handle = outLine.gameObject.transform.GetChild(0).GetComponent<Image>();
+        player = GameObject.FindWithTag("Player");
+    }
+
+    private void Update()
+    {
+        CollideController();
+    }
+
+    private bool LadderUseDetection()
+    {
+        tempPlayerMove tempPlayerMove = player.GetComponent<tempPlayerMove>();
+
+        if ((handle.rectTransform.anchoredPosition.x >= -15 && handle.rectTransform.anchoredPosition.x <= 15) &&
+            handle.rectTransform.anchoredPosition.y <= -(outLine.rectTransform.sizeDelta.x / 6) &&
+            tempPlayerMove.isLadderCollide[1]) return true;
+        else if ((handle.rectTransform.anchoredPosition.x >= -15 && handle.rectTransform.anchoredPosition.x <= 15) &&
+            handle.rectTransform.anchoredPosition.y >= outLine.rectTransform.sizeDelta.x / 6 &&
+            tempPlayerMove.isLadderCollide[0]) return true;
+        else return false;
+    }
+
+    private void CollideController()
+    {
+        GameObject platform = gameObject.transform.GetChild(0).gameObject.transform.Find("PlatformTilemap").gameObject;
+        TilemapCollider2D col = platform.GetComponent<TilemapCollider2D>();
+
+        if (LadderUseDetection()) col.enabled = false;
+        else col.enabled = true;
     }
 }

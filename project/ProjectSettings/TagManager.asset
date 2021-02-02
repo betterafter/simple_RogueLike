@@ -9,6 +9,8 @@ TagManager:
   - lever
   - box
   - door
+  - ladderChecker_up
+  - ladderChecker_down
   layers:
   - Default
   - TransparentFX

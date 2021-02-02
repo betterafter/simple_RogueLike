@@ -1,0 +1,608 @@
+fileFormatVersion: 2
+guid: 1248c42ed904b4c23bc5fbc5ea43d652
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -64542333811868752
+    second: FreeSizeMonster_0
+  - first:
+      213: -599267617518094161
+    second: FreeSizeMonster_1
+  - first:
+      213: -8391109930967762137
+    second: FreeSizeMonster_2
+  - first:
+      213: -9050784743700576820
+    second: FreeSizeMonster_3
+  - first:
+      213: 8933517556665887168
+    second: FreeSizeMonster_4
+  - first:
+      213: -669505113431705219
+    second: FreeSizeMonster_5
+  - first:
+      213: -8741132486361217001
+    second: FreeSizeMonster_6
+  - first:
+      213: -2629957006922082207
+    second: FreeSizeMonster_7
+  - first:
+      213: 4272945219589691136
+    second: FreeSizeMonster_8
+  - first:
+      213: -282550455683875532
+    second: FreeSizeMonster_9
+  - first:
+      213: -8158205707446991631
+    second: FreeSizeMonster_10
+  - first:
+      213: -453752888938911901
+    second: FreeSizeMonster_11
+  - first:
+      213: 4414932025378762090
+    second: FreeSizeMonster_12
+  - first:
+      213: 1822193334018231160
+    second: FreeSizeMonster_13
+  - first:
+      213: -8724620742385183640
+    second: FreeSizeMonster_14
+  - first:
+      213: 1760721455891153689
+    second: FreeSizeMonster_15
+  - first:
+      213: -5186359435684587976
+    second: FreeSizeMonster_16
+  - first:
+      213: -6685625647651734425
+    second: FreeSizeMonster_17
+  - first:
+      213: -4191643056581504072
+    second: FreeSizeMonster_18
+  - first:
+      213: 8472714893248129381
+    second: FreeSizeMonster_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FreeSizeMonster_0
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 3855
+        width: 152
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb3b20e613ba1ff0800000000000000
+      internalID: -64542333811868752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreeSizeMonster_1
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 3861
+        width: 132
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa87074e649fea7f0800000000000000
+      internalID: -599267617518094161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreeSizeMonster_2
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 3857
+        width: 114
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72bf96dc9f9cc8b80800000000000000
+      internalID: -8391109930967762137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreeSizeMonster_3
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 3493
+        width: 136
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5c33d8a37256280800000000000000
+      internalID: -9050784743700576820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreeSizeMonster_4
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 3499
+        width: 136
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c929cfc2ea3afb70800000000000000
+      internalID: 8933517556665887168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreeSizeMonster_5
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 3485
+        width: 142
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79789285a075b6f0800000000000000
+      internalID: -669505113431705219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreeSizeMonster_6
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 3483
+        width: 225
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71800dfe05241b680800000000000000
+      internalID: -8741132486361217001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreeSizeMonster_7
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 3465
+        width: 136
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1681cdb4904808bd0800000000000000
+      internalID: -2629957006922082207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreeSizeMonster_8
+      rect:
+        serializedVersion: 2
+        x: 1907
+        y: 3469
+        width: 122
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007d856c90d8c4b30800000000000000
+      internalID: 4272945219589691136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreeSizeMonster_9
+      rect:
+        serializedVersion: 2
+        x: 2307
+        y: 3463
+        width: 244
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d76d98bdd241cf0800000000000000
+      internalID: -282550455683875532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreeSizeMonster_10
+      rect:
+        serializedVersion: 2
+        x: 2871
+        y: 3487
+        width: 309
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4ce03122b38ce80800000000000000
+      internalID: -8158205707446991631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreeSizeMonster_11
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 3295
+        width: 308
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3672dfec622f3b9f0800000000000000
+      internalID: -453752888938911901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreeSizeMonster_12
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 3303
+        width: 310
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d6238294df44d30800000000000000
+      internalID: 4414932025378762090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreeSizeMonster_13
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 3273
+        width: 270
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87bcd32de2bb94910800000000000000
+      internalID: 1822193334018231160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreeSizeMonster_14
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 2953
+        width: 168
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864502ae8abebe680800000000000000
+      internalID: -8724620742385183640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreeSizeMonster_15
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 2411
+        width: 194
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9130dced5d65f6810800000000000000
+      internalID: 1760721455891153689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreeSizeMonster_16
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 2409
+        width: 186
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836568e52995608b0800000000000000
+      internalID: -5186359435684587976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreeSizeMonster_17
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 2409
+        width: 186
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c3a7a35e2e733a0800000000000000
+      internalID: -6685625647651734425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreeSizeMonster_18
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 2409
+        width: 188
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b31a3b29da44d5c0800000000000000
+      internalID: -4191643056581504072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreeSizeMonster_19
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 2411
+        width: 194
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56967371e41259570800000000000000
+      internalID: 8472714893248129381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

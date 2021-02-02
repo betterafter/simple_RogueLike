@@ -298,32 +298,42 @@ public class MapSortingAlgorithm : MonoBehaviour
 
     void MapEditor()
     {
-        for(int i = 0; i < arraySize; i++)
+        for (int i = 0; i < arraySize; i++)
         {
-            for(int j = 0; j < arraySize; j++)
+            for (int j = 0; j < arraySize; j++)
             {
-                GameObject temp = Instantiate(testMapImage, new Vector3(i * 2, j * 2), Quaternion.identity, GameObject.Find("Canvas").transform);
-                GameObject text = Instantiate(textMesh, new Vector3(i * 2, j * 2), Quaternion.identity, GameObject.Find("Canvas").transform);
-                text.GetComponent<TextMesh>().text = stageMap[i, j].name;
-
                 GameObject curr = stageMap[i, j];
                 TileMap tm = curr.GetComponent<TileMap>();
                 tm.Init();
-                for (int k = 0; k < 4; k++)
-                {
-                    if(tm.connectedGameObject[k] != null)
-                    {
-                        
-                        GameObject connectedObject = tm.connectedGameObject[k];
-                        TileMap connectedObjectTilemap = connectedObject.GetComponent<TileMap>();
-
-                        int nx = connectedObjectTilemap.tileX; int ny = connectedObjectTilemap.tileY;
-                        float cx = (i + nx) / 2f; float cy = (j + ny) / 2f;
-                        Instantiate(testPathImage, new Vector3(cx * 2, cy * 2), Quaternion.identity);
-                    }
-                }
             }
         }
+
+        //for (int i = 0; i < arraySize; i++)
+        //{
+        //    for(int j = 0; j < arraySize; j++)
+        //    {
+        //        GameObject temp = Instantiate(testMapImage, new Vector3(i * 2, j * 2), Quaternion.identity, GameObject.Find("Canvas").transform);
+        //        GameObject text = Instantiate(textMesh, new Vector3(i * 2, j * 2), Quaternion.identity, GameObject.Find("Canvas").transform);
+        //        text.GetComponent<TextMesh>().text = stageMap[i, j].name;
+
+        //        GameObject curr = stageMap[i, j];
+        //        TileMap tm = curr.GetComponent<TileMap>();
+        //        tm.Init();
+        //        for (int k = 0; k < 4; k++)
+        //        {
+        //            if(tm.connectedGameObject[k] != null)
+        //            {
+                        
+        //                GameObject connectedObject = tm.connectedGameObject[k];
+        //                TileMap connectedObjectTilemap = connectedObject.GetComponent<TileMap>();
+
+        //                int nx = connectedObjectTilemap.tileX; int ny = connectedObjectTilemap.tileY;
+        //                float cx = (i + nx) / 2f; float cy = (j + ny) / 2f;
+        //                Instantiate(testPathImage, new Vector3(cx * 2, cy * 2), Quaternion.identity);
+        //            }
+        //        }
+        //    }
+        //}
 
 
     }
