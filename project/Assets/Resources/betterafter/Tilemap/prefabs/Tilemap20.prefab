@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7005951505335774800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8621470524204718125}
+  - component: {fileID: 7598155751753532316}
+  m_Layer: 0
+  m_Name: Tilemap20
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8621470524204718125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7005951505335774800}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5872540036184840154}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7598155751753532316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7005951505335774800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d6e7a23e7174e07875be3617eafcae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 1
+  length: 0
+  bx: 0
+  by: 0
+  connectedGameObject:
+  - {fileID: 0}
+  - {fileID: 7005951505335774800, guid: be36d666a97b94ec4857349381bc5abe, type: 3}
+  - {fileID: 8913368542410873566, guid: 49dffcee27b9c48c58c9386a281ed777, type: 3}
+  - {fileID: 0}
+--- !u!1001 &3196197841745325136
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8621470524204718125}
+    m_Modifications:
+    - target: {fileID: 9017430263035542410, guid: 92ec656e11663a84bbc52e6db212fa2d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017430263035542410, guid: 92ec656e11663a84bbc52e6db212fa2d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017430263035542410, guid: 92ec656e11663a84bbc52e6db212fa2d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017430263035542410, guid: 92ec656e11663a84bbc52e6db212fa2d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017430263035542410, guid: 92ec656e11663a84bbc52e6db212fa2d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017430263035542410, guid: 92ec656e11663a84bbc52e6db212fa2d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017430263035542410, guid: 92ec656e11663a84bbc52e6db212fa2d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017430263035542410, guid: 92ec656e11663a84bbc52e6db212fa2d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017430263035542410, guid: 92ec656e11663a84bbc52e6db212fa2d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017430263035542410, guid: 92ec656e11663a84bbc52e6db212fa2d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017430263035542410, guid: 92ec656e11663a84bbc52e6db212fa2d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017430263035542412, guid: 92ec656e11663a84bbc52e6db212fa2d,
+        type: 3}
+      propertyPath: m_Name
+      value: VerticalMaze3Map
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 92ec656e11663a84bbc52e6db212fa2d, type: 3}
+--- !u!4 &5872540036184840154 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9017430263035542410, guid: 92ec656e11663a84bbc52e6db212fa2d,
+    type: 3}
+  m_PrefabInstance: {fileID: 3196197841745325136}
+  m_PrefabAsset: {fileID: 0}

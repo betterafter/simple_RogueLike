@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ladder
+  - spike
+  - lever
+  - box
+  - door
+  - ladderChecker_up
+  - ladderChecker_down
+  - light
+  - switch
   layers:
   - Default
   - TransparentFX
