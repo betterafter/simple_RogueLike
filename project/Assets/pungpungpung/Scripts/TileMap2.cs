@@ -80,14 +80,14 @@ public class TileMap2 : MonoBehaviour
 
     public void shortestPathCalculation(GameObject currentObject, int len)
     {
-        TileMap currentTileMap = currentObject.GetComponent<TileMap>();
+        TileMap2 currentTileMap = currentObject.GetComponent<TileMap2>();
         for (int i = 0; i < 4; i++)
         {
             if(currentTileMap.connectedGameObject[i] != null)
             {
                 GameObject temp = currentTileMap.connectedGameObject[i];
-                int xx = temp.GetComponent<TileMap>().tileX;
-                int yy = temp.GetComponent<TileMap>().tileY;
+                int xx = temp.GetComponent<TileMap2>().tileX;
+                int yy = temp.GetComponent<TileMap2>().tileY;
                 if (PathLength[xx, yy] > len + 1)
                 {
                     PathLength[xx, yy] = len + 1;
@@ -98,18 +98,24 @@ public class TileMap2 : MonoBehaviour
     }
 
     private void Start()
-    {
+    {   
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
         outLine = canvas.gameObject.transform.GetChild(0).GetComponent<Image>();
         handle = outLine.gameObject.transform.GetChild(0).GetComponent<Image>();
+        
         player = GameObject.FindWithTag("Player");
+        if(this.gameObject.name == "SwordMaceAxShieldMap(Clone)")
+        {
+            player.transform.position = new Vector3(-15,-16,0);
+        }
+
     }
 
     private void Update()
     {
-        CollideController();
+        //CollideController();
     }
-
+    
     private bool LadderUseDetection()
     {
         tempPlayerMove tempPlayerMove = player.GetComponent<tempPlayerMove>();
@@ -122,13 +128,15 @@ public class TileMap2 : MonoBehaviour
             tempPlayerMove.isLadderCollide[0]) return true;
         else return false;
     }
-
+    
+    
     private void CollideController()
     {
         GameObject platform = gameObject.transform.GetChild(0).gameObject.transform.Find("PlatformTilemap").gameObject;
         TilemapCollider2D col = platform.GetComponent<TilemapCollider2D>();
-
+        
         if (LadderUseDetection()) col.enabled = false;
         else col.enabled = true;
     }
+    
 }

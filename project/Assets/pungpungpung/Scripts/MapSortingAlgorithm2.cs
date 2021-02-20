@@ -8,28 +8,35 @@ public class MapSortingAlgorithm2 : MonoBehaviour
     // 4 * 4 맵
     const int arraySize = 5;
     Object[] TileMaps;
+    public Object[] start_TileMap;
 
     public GameObject testMapImage;
     public GameObject testPathImage;
     //public GameObject textMesh;
 
     public GameObject[,] stageMap;
+    
 
     private void Awake()
     {
         TileMaps = Resources.LoadAll("pungpungpung/Prefabs/");
+        start_TileMap = Resources.LoadAll("pungpungpung/Start Prefabs/");
     }
 
     // Start is called before the first frame update
     void Start()
     {
         stageMap = new GameObject[arraySize, arraySize];
+        start_TileMap = new GameObject[1];
         RandomArrangement();
         connection();
         ChunkConnection();
+        startMap();
+        /*
         MapEditor();
 
         mapInit();
+        */
     }
 
     // 맵을 좌표상에 랜덤으로 배치하는 계산................................................
@@ -38,7 +45,8 @@ public class MapSortingAlgorithm2 : MonoBehaviour
         Object[] temp;
         int x = 0, y = 0;
         temp = TileMaps;
-        while (temp.Length > 0)
+        //맵이 (30-1)개 이상이므로 수정
+        while (temp.Length > TileMaps.Length - (arraySize*arraySize))
         {
             int ran = Random.Range(0, temp.Length);
             if(x > arraySize - 1)
@@ -46,7 +54,7 @@ public class MapSortingAlgorithm2 : MonoBehaviour
                 x = 0; y++;
             }
             stageMap[x, y] = temp[ran] as GameObject;
-            TileMap tempTileMap = stageMap[x, y].GetComponent<TileMap>();
+            TileMap2 tempTileMap = stageMap[x, y].GetComponent<TileMap2>();
             tempTileMap.tileX = x; tempTileMap.tileY = y;
             for (int i = 0; i < 4; i++) tempTileMap.connectedGameObject[i] = null;
             temp = removeFromList(temp, ran);
@@ -106,8 +114,8 @@ public class MapSortingAlgorithm2 : MonoBehaviour
 
         GameObject thisTileMapObject;
         GameObject connectedTileMapObject;
-        TileMap thisTileMap;
-        TileMap connectedTileMap;
+        TileMap2 thisTileMap;
+        TileMap2 connectedTileMap;
 
         // 주변이 맵을 벗어나는지 확인한다.
         // direction은 0 <-> 1 , 2 <-> 3  과 대치된다. 
@@ -137,8 +145,8 @@ public class MapSortingAlgorithm2 : MonoBehaviour
             connectedTileMapObject = stageMap[kvp.Key + direction[ran, 0], kvp.Value + direction[ran, 1]];
 
             // 각각 연결을 선언해준다.
-            thisTileMap = thisTileMapObject.GetComponent<TileMap>();
-            connectedTileMap = connectedTileMapObject.GetComponent<TileMap>();
+            thisTileMap = thisTileMapObject.GetComponent<TileMap2>();
+            connectedTileMap = connectedTileMapObject.GetComponent<TileMap2>();
 
             thisTileMap.connectedGameObject[ran] = connectedTileMapObject;
             if (ran == 0)
@@ -173,8 +181,8 @@ public class MapSortingAlgorithm2 : MonoBehaviour
         isConnected[x, y] = true;
 
         // 각각 연결을 선언해준다.
-        thisTileMap = thisTileMapObject.GetComponent<TileMap>();
-        connectedTileMap = connectedTileMapObject.GetComponent<TileMap>();
+        thisTileMap = thisTileMapObject.GetComponent<TileMap2>();
+        connectedTileMap = connectedTileMapObject.GetComponent<TileMap2>();
 
         thisTileMap.connectedGameObject[ran] = connectedTileMapObject;
         if (ran == 0) connectedTileMap.connectedGameObject[1] = thisTileMapObject;
@@ -240,23 +248,23 @@ public class MapSortingAlgorithm2 : MonoBehaviour
                             // 0 : 위. 1 : 아래, 2 : 왼쪽, 3 : 오른쪽
                             if (x1 < x2)
                             {
-                                curr.GetComponent<TileMap>().connectedGameObject[2] = next;
-                                next.GetComponent<TileMap>().connectedGameObject[3] = curr;
+                                curr.GetComponent<TileMap2>().connectedGameObject[2] = next;
+                                next.GetComponent<TileMap2>().connectedGameObject[3] = curr;
                             }
                             else if (x1 > x2)
                             {
-                                curr.GetComponent<TileMap>().connectedGameObject[3] = next;
-                                next.GetComponent<TileMap>().connectedGameObject[2] = curr;
+                                curr.GetComponent<TileMap2>().connectedGameObject[3] = next;
+                                next.GetComponent<TileMap2>().connectedGameObject[2] = curr;
                             }
                             else if (y1 < y2)
                             {
-                                curr.GetComponent<TileMap>().connectedGameObject[0] = next;
-                                next.GetComponent<TileMap>().connectedGameObject[1] = curr;
+                                curr.GetComponent<TileMap2>().connectedGameObject[0] = next;
+                                next.GetComponent<TileMap2>().connectedGameObject[1] = curr;
                             }
                             else if (y1 > y2)
                             {
-                                curr.GetComponent<TileMap>().connectedGameObject[1] = next;
-                                next.GetComponent<TileMap>().connectedGameObject[0] = curr;
+                                curr.GetComponent<TileMap2>().connectedGameObject[1] = next;
+                                next.GetComponent<TileMap2>().connectedGameObject[0] = curr;
                             }
                             isChunkConnected = true;
                             ChunkListCheck[ii, jj] = true;
@@ -281,7 +289,7 @@ public class MapSortingAlgorithm2 : MonoBehaviour
             int nx = x + direction[i, 0]; int ny = y + direction[i, 1];
             if(nx >= 0 && nx < arraySize && ny >= 0 && ny < arraySize && !ChunkCheck[nx, ny])
             {
-                TileMap cTM = stageMap[x, y].GetComponent<TileMap>();
+                TileMap2 cTM = stageMap[x, y].GetComponent<TileMap2>();
                 if (cTM.connectedGameObject[i] != null && stageMap[nx,ny] != null && cTM.connectedGameObject[i] == stageMap[nx, ny])
                 {
                     FindPath(new KeyValuePair<int, int>(nx, ny), chunk);
@@ -295,6 +303,13 @@ public class MapSortingAlgorithm2 : MonoBehaviour
         public List<KeyValuePair<int, int>> element = new List<KeyValuePair<int, int>>();
     }
 
+    void startMap()
+    {
+        Instantiate(start_TileMap[0], new Vector3(0, 0), Quaternion.identity);
+    }
+
+
+
 
     void MapEditor()
     {
@@ -303,7 +318,7 @@ public class MapSortingAlgorithm2 : MonoBehaviour
             for (int j = 0; j < arraySize; j++)
             {
                 GameObject curr = stageMap[i, j];
-                TileMap tm = curr.GetComponent<TileMap>();
+                TileMap2 tm = curr.GetComponent<TileMap2>();
                 tm.Init();
             }
         }
@@ -312,12 +327,12 @@ public class MapSortingAlgorithm2 : MonoBehaviour
         {
             for(int j = 0; j < arraySize; j++)
             {
-                GameObject temp = Instantiate(testMapImage, new Vector3(i * 2, j * 2), Quaternion.identity, GameObject.Find("Canvas").transform);
+                //GameObject temp = Instantiate(testMapImage, new Vector3(i * 2, j * 2), Quaternion.identity, GameObject.Find("Canvas").transform);
                // GameObject text = Instantiate(textMesh, new Vector3(i * 2, j * 2), Quaternion.identity, GameObject.Find("Canvas").transform);
                 //text.GetComponent<TextMesh>().text = stageMap[i, j].name;
 
                 GameObject curr = stageMap[i, j];
-                TileMap tm = curr.GetComponent<TileMap>();
+                TileMap2 tm = curr.GetComponent<TileMap2>();
                 tm.Init();
                 for (int k = 0; k < 4; k++)
                 {
@@ -325,11 +340,11 @@ public class MapSortingAlgorithm2 : MonoBehaviour
                    {
                         
                         GameObject connectedObject = tm.connectedGameObject[k];
-                        TileMap connectedObjectTilemap = connectedObject.GetComponent<TileMap>();
+                        TileMap2 connectedObjectTilemap = connectedObject.GetComponent<TileMap2>();
 
                         int nx = connectedObjectTilemap.tileX; int ny = connectedObjectTilemap.tileY;
                         float cx = (i + nx) / 2f; float cy = (j + ny) / 2f;
-                        Instantiate(testPathImage, new Vector3(cx * 2, cy * 2), Quaternion.identity);
+                       // Instantiate(testPathImage, new Vector3(cx * 2, cy * 2), Quaternion.identity);
                     }
                 }
             }
@@ -339,7 +354,7 @@ public class MapSortingAlgorithm2 : MonoBehaviour
     }
 
     void mapInit()
-    {
+    {   
         int x = Random.Range(0, arraySize);
         int y = Random.Range(0, arraySize);
 
